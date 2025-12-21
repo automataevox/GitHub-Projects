@@ -1,0 +1,66 @@
+import NextLink from "next/link";
+import { Card } from "@heroui/card";
+import { STATUS_COLORS, TYPE_COLORS } from "@/data/common";
+
+interface ProjectCardProps {
+    name: string;
+    description: string;
+    path: string;
+    type?: string;
+    status?: string;
+}
+
+export const ProjectCard = ({
+    name,
+    description,
+    path,
+    type,
+    status,
+}: ProjectCardProps) => {
+    return (
+        <NextLink href={path} className="w-full">
+            <Card
+                className="p-5 relative overflow-hidden rounded-2xl cursor-pointer 
+                   bg-gradient-to-tr from-purple-600/10 via-black/5 to-blue-400/10
+                   shadow-md transition-transform duration-500 ease-in-out
+                   hover:scale-[1.03] hover:shadow-2xl border-1 border-white/5
+                   group"
+            >
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-blue-900/20
+                        opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl pointer-events-none" />
+
+                {/* Inner soft glow */}
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-white/5 pointer-events-none"></div>
+
+                {/* Content */}
+                <div className="relative flex flex-col gap-3 z-10">
+                    <div className="flex justify-between items-center">
+                        <h3 className="font-bold text-lg text-white">{name}</h3>
+                        {status && (
+                            <span
+                                className={`text-xs px-2 py-0.5 rounded font-semibold transition-colors duration-300 ${STATUS_COLORS[status.toLowerCase()] || STATUS_COLORS.default
+                                    }`}
+                            >
+                                {status.toUpperCase()}
+                            </span>
+                        )}
+                    </div>
+
+                    <p className="text-sm text-white/80 transition-colors duration-300 group-hover:text-white">
+                        {description}
+                    </p>
+
+                    {type && (
+                        <span
+                            className={`text-xs mt-1 px-2 py-0.5 rounded font-medium w-fit transition-colors duration-300 ${TYPE_COLORS[type.toLowerCase()] || TYPE_COLORS.default
+                                }`}
+                        >
+                            {type}
+                        </span>
+                    )}
+                </div>
+            </Card>
+        </NextLink>
+    );
+};
