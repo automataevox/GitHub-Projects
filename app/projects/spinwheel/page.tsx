@@ -53,6 +53,9 @@ export default function SpinwheelPage() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-8 py-8 md:py-10 w-full">
+      <div className="text-center mb-2">
+        <h1 className="text-3xl font-bold">Spinwheel</h1>
+      </div>
       <div className="flex flex-row gap-24">
         <div className="flex flex-col items-center gap-8">
           {/* Mode Switch */}

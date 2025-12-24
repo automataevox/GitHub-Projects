@@ -1,4 +1,4 @@
-export const DUMMY_DATA = {
+export const DUMMY_DATA: { followers: string[]; subscribers: string[] } = {
     followers: [
         "A",
         "B",

@@ -9,5 +9,15 @@ export const projects = [
       status: "wip",
       inNav: true,
     },
+    {
+      id: "qrcode",
+      name: "QR Code Generator",
+      shortDescription: "Fast, clean, SVG-based QR codes.",
+      description: "Generate QR codes quickly with SVG output for crisp quality.",
+      path: "/projects/qrcode",
+      type: "tool",
+      status: "complete",
+      inNav: true,
+    },
   ]
   

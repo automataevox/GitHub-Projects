@@ -42,7 +42,7 @@ export const Navbar = () => {
       {/* DESKTOP NAV */}
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
         {/* PROJECTS DROPDOWN */}
-        <Dropdown>
+        <Dropdown className="bg-neutral-900/70 backdrop-blur-lg">
           <NavbarItem>
             <DropdownTrigger>
               <NextLink href={"#"} className="text-sm font-medium text-foreground/80 hover:text-foreground">
