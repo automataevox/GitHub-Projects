@@ -86,7 +86,7 @@ export default function Home() {
 
     img.src =
       "data:image/svg+xml;base64," +
-      btoa(unescape(encodeURIComponent(svgData)));
+      btoa(encodeURIComponent(svgData));
   };
 
   return (

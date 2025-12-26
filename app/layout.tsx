@@ -46,7 +46,7 @@ export default function RootLayout({
             <Navbar />
 
             {/* Main content */}
-            <main className="container mx-auto max-w-7xl px-6 flex-grow flex flex-col gap-8">
+            <main className="container mx-auto px-6 flex-grow flex flex-col gap-8">
               
               {/* Optional inner background glow effect */}
               <div className="fixed inset-0 pointer-events-none bg-gradient-to-tr from-purple-800/10 via-black/5 to-blue-400/5 rounded-xl bg-fixed"></div>
